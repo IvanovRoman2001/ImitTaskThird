@@ -26,6 +26,7 @@ public class PackedPieceProductTest {
 
     @org.junit.Test
     public void testGetGrossWeight() {
-        assertEquals(0, Double.compare(packagedProduct.getGrossWeight(), 2100.0));
+        assertEquals(0, Double.compare(packagedProduct.getGrossWeight(), 2010.0));
+        assertEquals(2010, packagedProduct.getGrossWeight(), 1e-10);
     }
 }

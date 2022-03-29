@@ -4,7 +4,9 @@ import static org.junit.Assert.*;
 
 public class BatchProductTest {
     ProductPackaging productPackaging = new ProductPackaging("Box", 10.0);
-    PackedWeightProduct[] weightProducts = {new PackedWeightProduct(new WeightProduct("1", "2"), 11.0, productPackaging)};
+    PackedWeightProduct[] weightProducts = {
+            new PackedWeightProduct(new WeightProduct("1", "2"), 11.0, productPackaging)
+    };
 
     BatchProduct productBatch = new BatchProduct("xxx", weightProducts);
 

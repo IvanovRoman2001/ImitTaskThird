@@ -26,7 +26,7 @@ public class PackedPieceProduct extends PackedProduct{
     }
 
     public double getGrossWeight() {
-        return count * (product.getWeight() + productPackaging.getWeight());
+        return (count * product.getWeight()) + productPackaging.getWeight();
     }
 
     @Override

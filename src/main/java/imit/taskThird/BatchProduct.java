@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public class BatchProduct {
-    private  String description;
+    private final String description;
     private  PackedProduct[] products;
 
     public BatchProduct(String description, PackedProduct... products) {
@@ -42,6 +42,11 @@ public class BatchProduct {
     }
 
     public double getWeight() {
-        return Arrays.stream(products).mapToDouble(PackedProduct::getGrossWeight).sum();
+        double sumWeight = 0.0;
+        for (PackedProduct p: products) {
+            sumWeight += p.getGrossWeight();
+        }
+        return sumWeight;
+        //return Arrays.stream(products).mapToDouble(PackedProduct::getGrossWeight).sum();
     }
 }

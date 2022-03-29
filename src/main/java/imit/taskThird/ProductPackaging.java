@@ -6,6 +6,7 @@ public class ProductPackaging {
     private String name;
     private double weight;
 
+    // TODO: 17.03.2022 check name  != null,  weight != 0.0
     public ProductPackaging(String name, double weight) {
         this.name = name;
         this.weight = weight;
@@ -23,7 +24,7 @@ public class ProductPackaging {
         this.name = name;
     }
 
-    public void setWeight(float weight) {
+    public void setWeight(double weight) {
         this.weight = weight;
     }
 
